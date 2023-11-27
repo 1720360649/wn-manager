@@ -1,0 +1,44 @@
+{
+	"pages": [
+		{
+			"path": "/Blog/Index",
+			"name": "首页",
+			"type": "local"
+		},
+		{
+			"path": "/Blog/Set",
+			"name": "设置",
+			"type": "local"
+		},
+    {
+      "path": "/Blog/Test",
+      "name": "测试",
+      "type": "local"
+    },
+    {
+      "path": "/Blog/Test2",
+      "name": "测试2",
+      "type": "local"
+    }
+	],
+	"tabbar": [
+		{
+			"path": "/Blog/Index",
+			"name": "首页",
+			"icon": {
+				"type": "icon",
+				"iconPath": "wap-home-o",
+				"selectedIconPath": "wap-home"
+			}
+		},
+		{
+			"path": "/Blog/Set",
+			"name": "设置",
+			"icon": {
+				"type": "icon",
+				"iconPath": "setting-o",
+				"selectedIconPath": "setting"
+			}
+		}
+	]
+}
