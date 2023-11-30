@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <van-button type="primary" @click="go('/Blog/Test')">Test</van-button>
+  <div class="Index">
+    ssdsad
   </div>
 </template>
 
@@ -8,3 +8,9 @@
 import { go } from '@/utils';
 
 </script>
+
+<style lang="scss" scoped>
+.Index {
+  width: 100%;
+}
+</style>

@@ -4,9 +4,9 @@ import themes from '@/theme'
 
 const useThemeStore = defineStore('theme', () => {
   const state = reactive({
-    name: "中国红",
-    theme: "themeRed",
-    themeColor: "#f92801",
+    name: "中国蓝",
+    theme: "themeBlue",
+    themeColor: "#0091ea",
     themeTextColor: "#ffffff",
   })
 

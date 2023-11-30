@@ -1,11 +1,7 @@
 <template>
-	<van-config-provider
-		:class="themeStore.theme"
-		:theme-vars="{ primaryColor: themeStore.themeColor }"
-		theme-vars-scope="global"
-	>
+	<div class="wn-page" :class="themeStore.theme">
 		<router-view></router-view>
-	</van-config-provider>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -22,7 +18,7 @@ const routerStore = useRouterStore()
 watch(
 	() => router.currentRoute.value.path,
 	(toPath) => {
-    console.log('toPath', toPath)
+		console.log('toPath', toPath)
 		routerStore.path = toPath
 		// 用户刷新后，从持久化信息中获取历史信息并重新构建路由
 		reGetInfo(toPath)
@@ -58,19 +54,10 @@ function reGetInfo(toPath: string) {
 	margin: 0;
 	padding: 0;
 	user-select: none;
-
-	// navbar颜色
-	--van-nav-bar-background: var(--uni-all-color);
-	--van-nav-bar-icon-color: var(--uni-text-color);
-	--van-nav-bar-text-color: var(--uni-text-color);
-	--van-nav-bar-title-text-color: var(--uni-text-color);
-	--van-nav-bar-arrow-size: 19px;
 }
 
-.app-container {
-	overflow: hidden;
-	overflow-y: auto;
+.wn-page {
 	width: 100vw;
-	background-color: rgba($color: gray, $alpha: 0.1);
+	height: 100vh;
 }
 </style>

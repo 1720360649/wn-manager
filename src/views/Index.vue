@@ -1,9 +1,8 @@
 <template>
 	<div class="welcome-page">
 		<div class="background-image">
-			<van-image
-				width="100%"
-				height="100%"
+			<el-image
+				style="width:100%;height:100%;"
 				fit="cover"
 			  :src="require('@/assets/bg/bg3.jpg')"
 			/>
@@ -18,13 +17,13 @@
 </template>
 
 <script lang="ts" setup>
-import { createRoutes, goTabbar, replace } from '@/utils';
+import { createRoutes, replace } from '@/utils';
 
 async function onHome(){
   //假设登录成功
   let re = await createRoutes()
   if(re){
-    goTabbar('/Blog/Set')
+    replace('/Home')
   }
 }
 
